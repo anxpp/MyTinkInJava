@@ -1,4 +1,4 @@
-package com.anxpp.thinkinjava.chapter11.Iterable;
+ï»¿package com.anxpp.thinkinjava.chapter11.Iterable;
 
 import java.util.Iterator;
 
@@ -13,7 +13,7 @@ public class Cigarette implements Iterable<Cigarette> {
 	}
 	
 	class MyIterator implements Iterator<Cigarette>{
-		//Ïàµ±ÓÚË÷Òı
+		//ç›¸å½“äºç´¢å¼•
 		private int index = 0;
 		@Override
 		public boolean hasNext() {
