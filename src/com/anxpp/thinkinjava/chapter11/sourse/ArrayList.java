@@ -35,7 +35,7 @@ import java.util.function.UnaryOperator;
  *	如果需要应用到多线程中，需要在外部做同步
  *
  * modCount：
- * 	定义在AbstractList中：rotected transient int modCount = 0;
+ * 	定义在AbstractList中：protected transient int modCount = 0;
  * 	已从结构上修改此列表的次数。从结构上修改是指更改列表的大小，或者打乱列表，从而使正在进行的迭代产生错误的结果。
  *	此字段由iterator和listiterator方法返回的迭代器和列表迭代器实现使用。
  *	如果意外更改了此字段中的值，则迭代器（或列表迭代器）将抛出concurrentmodificationexception来响应next、remove、previous、set或add操作。
@@ -246,7 +246,7 @@ public class ArrayList<E> extends AbstractList<E> implements List<E>, RandomAcce
         elementData[--size] = null; //便于垃圾回收期回收
         return oldValue;
     }
-    //删除指定元素首次出现的位置
+    //删除指定元素首次出现的位置,首先遍历找到，然后删除
     public boolean remove(Object o) {
         if (o == null) {
             for (int index = 0; index < size; index++)
